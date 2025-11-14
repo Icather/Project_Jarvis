@@ -16,6 +16,9 @@ interface ConversationDao {
     @Query("SELECT * FROM conversations ORDER BY startTime DESC")
     suspend fun getAllConversations(): List<Conversation>
 
+    @Query("SELECT * FROM conversations WHERE id IN (:conversationIds)")
+    suspend fun getConversationsByIds(conversationIds: List<Long>): List<Conversation>
+
     @Query("SELECT * FROM conversations WHERE id = :conversationId")
     suspend fun getConversation(conversationId: Long): Conversation?
 

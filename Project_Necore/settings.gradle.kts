@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Project_Jarvis"
+rootProject.name = "Project_Necore"
 include(":app")

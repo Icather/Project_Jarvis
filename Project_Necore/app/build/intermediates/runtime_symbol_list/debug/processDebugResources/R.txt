@@ -3749,6 +3749,7 @@ int id action_bar_spinner 0x7f080038
 int id action_bar_subtitle 0x7f080039
 int id action_bar_title 0x7f08003a
 int id action_clear_history 0x7f08003b
+int id action_confirm_export 0x7f080244
 int id action_container 0x7f08003c
 int id action_context_bar 0x7f08003d
 int id action_divider 0x7f08003e
@@ -3760,6 +3761,7 @@ int id action_mode_bar 0x7f080043
 int id action_mode_bar_stub 0x7f080044
 int id action_mode_close_button 0x7f080045
 int id action_new_chat 0x7f080046
+int id action_select_all 0x7f080245
 int id action_settings 0x7f080047
 int id action_text 0x7f080048
 int id actions 0x7f080049
@@ -3908,6 +3910,7 @@ int id exitUntilCollapsed 0x7f0800d7
 int id expand_activities_button 0x7f0800d8
 int id expanded_menu 0x7f0800d9
 int id exportApiConfigs 0x7f0800da
+int id exportChatHistory 0x7f080242
 int id fade 0x7f0800db
 int id fileUploadButton 0x7f0800dc
 int id file_name_text 0x7f0800dd
@@ -3941,6 +3944,7 @@ int id hide_graphics_layer_in_inspector_tag 0x7f0800f8
 int id hide_ime_id 0x7f0800f9
 int id hide_in_inspector_tag 0x7f0800fa
 int id hideable 0x7f0800fb
+int id historyCheckbox 0x7f080246
 int id historyRecyclerView 0x7f0800fc
 int id historyTimestamp 0x7f0800fd
 int id historyTitle 0x7f0800fe
@@ -3958,6 +3962,7 @@ int id image 0x7f080109
 int id imageUploadButton 0x7f08010a
 int id immediateStop 0x7f08010b
 int id importApiConfigs 0x7f08010c
+int id importChatHistory 0x7f080243
 int id included 0x7f08010d
 int id indeterminate 0x7f08010e
 int id info 0x7f08010f
@@ -4545,6 +4550,7 @@ int string character_counter_content_description 0x7f100033
 int string character_counter_overflowed_content_description 0x7f100034
 int string character_counter_pattern 0x7f100035
 int string chat_history 0x7f100036
+int string choose_import_mode 0x7f10012a
 int string clear_history 0x7f100037
 int string clear_text_end_icon_content_description 0x7f100038
 int string close_drawer 0x7f100039
@@ -4556,12 +4562,18 @@ int string default_popup_window_title 0x7f10003e
 int string delete 0x7f10003f
 int string delete_api_config_message 0x7f100040
 int string delete_api_config_title 0x7f100041
+int string deselect_all 0x7f100139
 int string dropdown_menu 0x7f100042
 int string error 0x7f100043
 int string error_a11y_label 0x7f100044
 int string error_icon_content_description 0x7f100045
 int string error_occurred 0x7f100046
+int string export 0x7f100138
+int string export_all 0x7f10012b
 int string export_api_configs 0x7f100047
+int string export_chat_history 0x7f10012c
+int string export_failed 0x7f10012d
+int string export_successful 0x7f10012e
 int string exposed_dropdown_menu_content_description 0x7f100048
 int string fab_transformation_scrim_behavior 0x7f100049
 int string fab_transformation_sheet_behavior 0x7f10004a
@@ -4569,7 +4581,12 @@ int string hide_bottom_view_on_scroll_behavior 0x7f10004b
 int string history 0x7f10004c
 int string icon_content_description 0x7f10004d
 int string import_api_configs 0x7f10004e
+int string import_chat_history 0x7f10012f
+int string import_failed 0x7f100130
+int string import_mode 0x7f100131
+int string import_successful_messages 0x7f100132
 int string in_progress 0x7f10004f
+int string incremental_import 0x7f100133
 int string indeterminate 0x7f100050
 int string item_view_role_description 0x7f100051
 int string m3_exceed_max_badge_text_suffix 0x7f100052
@@ -4750,8 +4767,10 @@ int string nav_rail_expanded_a11y_label 0x7f100100
 int string navigation_menu 0x7f100101
 int string network_error 0x7f100102
 int string new_chat 0x7f100103
+int string no_history_to_export 0x7f100134
 int string not_selected 0x7f100104
 int string not_set 0x7f100105
+int string overwrite_import 0x7f100135
 int string password_toggle_content_description 0x7f100106
 int string path_password_eye 0x7f100107
 int string path_password_eye_mask_strike_through 0x7f100108
@@ -4768,6 +4787,9 @@ int string searchbar_scrolling_view_behavior 0x7f100112
 int string searchview_clear_text_content_description 0x7f100113
 int string searchview_navigation_content_description 0x7f100114
 int string select_a_model 0x7f100115
+int string select_all 0x7f10013a
+int string select_and_export 0x7f100136
+int string select_conversations_to_export 0x7f100137
 int string selected 0x7f100116
 int string send 0x7f100117
 int string settings 0x7f100118
@@ -5495,7 +5517,7 @@ int style Theme_MaterialComponents_Light_NoActionBar 0x7f1102bf
 int style Theme_MaterialComponents_Light_NoActionBar_Bridge 0x7f1102c0
 int style Theme_MaterialComponents_NoActionBar 0x7f1102c1
 int style Theme_MaterialComponents_NoActionBar_Bridge 0x7f1102c2
-int style Theme_Project_Jarvis_App 0x7f1102c3
+int style Theme_Project_Necore_App 0x7f1102c3
 int style Theme_SplashScreen 0x7f1102c4
 int style Theme_SplashScreen_Common 0x7f1102c5
 int style Theme_SplashScreen_IconBackground 0x7f1102c6

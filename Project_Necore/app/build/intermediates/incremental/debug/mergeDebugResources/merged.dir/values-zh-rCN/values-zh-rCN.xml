@@ -55,6 +55,7 @@
     <string name="character_counter_content_description">输入了 %1$d 个字符（上限为 %2$d 个）</string>
     <string name="character_counter_overflowed_content_description">超出字符数限制（共 %1$d 个，上限为 %2$d 个）</string>
     <string name="chat_history">聊天记录</string>
+    <string name="choose_import_mode">请选择导入聊天记录的方式。</string>
     <string name="clear_history">清除历史记录</string>
     <string name="clear_text_end_icon_content_description">清除文字</string>
     <string msgid="406453423630273620" name="close_drawer">"关闭导航菜单"</string>
@@ -66,17 +67,28 @@
     <string name="delete">删除</string>
     <string name="delete_api_config_message">您确定要删除此API配置吗？</string>
     <string name="delete_api_config_title">删除API配置</string>
+    <string name="deselect_all">取消全选</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"下拉菜单"</string>
     <string name="error">发生错误：%s</string>
     <string name="error_a11y_label">错误：无效</string>
     <string name="error_icon_content_description">错误</string>
     <string name="error_occurred">发生错误</string>
+    <string name="export">导出</string>
+    <string name="export_all">导出全部</string>
     <string name="export_api_configs">导出API配置</string>
+    <string name="export_chat_history">导出聊天记录</string>
+    <string name="export_failed">导出失败: %s</string>
+    <string name="export_successful">导出成功</string>
     <string name="exposed_dropdown_menu_content_description">显示下拉菜单</string>
     <string name="history">历史记录</string>
     <string name="icon_content_description">对话框图标</string>
     <string name="import_api_configs">导入API配置</string>
+    <string name="import_chat_history">导入聊天记录</string>
+    <string name="import_failed">导入失败: %s</string>
+    <string name="import_mode">导入模式</string>
+    <string name="import_successful_messages">导入成功。导入了 %1$d 个对话和 %2$d 条消息。</string>
     <string msgid="6827826412747255547" name="in_progress">"进行中"</string>
+    <string name="incremental_import">增量导入</string>
     <string msgid="7933458017204019916" name="indeterminate">"部分选中"</string>
     <string name="item_view_role_description">标签页</string>
     <string name="m3_loading_indicator_content_description">正在加载</string>
@@ -214,8 +226,10 @@
     <string msgid="542007171693138492" name="navigation_menu">"导航菜单"</string>
     <string name="network_error">网络错误：%s</string>
     <string name="new_chat">新的聊天</string>
+    <string name="no_history_to_export">没有聊天记录可导出。</string>
     <string msgid="6610465462668679431" name="not_selected">"未选择"</string>
     <string name="not_set">未设置</string>
+    <string name="overwrite_import">覆盖导入</string>
     <string name="password_toggle_content_description">显示密码</string>
     <string name="please_attach_image_for_ocr">请为 OCR 模型附加一张图片</string>
     <string name="provider">提供商</string>
@@ -227,6 +241,9 @@
     <string name="searchview_clear_text_content_description">清除文字</string>
     <string name="searchview_navigation_content_description">返回</string>
     <string name="select_a_model">选择一个模型</string>
+    <string name="select_all">全选</string>
+    <string name="select_and_export">选择导出</string>
+    <string name="select_conversations_to_export">选择要导出的对话</string>
     <string msgid="6043586758067023" name="selected">"已选择"</string>
     <string name="send">发送</string>
     <string name="settings">设置</string>

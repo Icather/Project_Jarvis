@@ -3,6 +3,7 @@ package icather.pages.dev.db
 import androidx.room.EntityDeleteOrUpdateAdapter
 import androidx.room.EntityInsertAdapter
 import androidx.room.RoomDatabase
+import androidx.room.util.appendPlaceholders
 import androidx.room.util.getColumnIndexOrThrow
 import androidx.room.util.performSuspending
 import androidx.sqlite.SQLiteStatement
@@ -16,6 +17,7 @@ import kotlin.collections.List
 import kotlin.collections.MutableList
 import kotlin.collections.mutableListOf
 import kotlin.reflect.KClass
+import kotlin.text.StringBuilder
 
 @Generated(value = ["androidx.room.RoomProcessor"])
 @Suppress(names = ["UNCHECKED_CAST", "DEPRECATION", "REDUNDANT_PROJECTION", "REMOVAL"])
@@ -78,6 +80,43 @@ public class ConversationDao_Impl(
           _tmpTitle = _stmt.getText(_columnIndexOfTitle)
           _item = Conversation(_tmpId,_tmpStartTime,_tmpTitle)
           _result.add(_item)
+        }
+        _result
+      } finally {
+        _stmt.close()
+      }
+    }
+  }
+
+  public override suspend fun getConversationsByIds(conversationIds: List<Long>): List<Conversation> {
+    val _stringBuilder: StringBuilder = StringBuilder()
+    _stringBuilder.append("SELECT * FROM conversations WHERE id IN (")
+    val _inputSize: Int = conversationIds.size
+    appendPlaceholders(_stringBuilder, _inputSize)
+    _stringBuilder.append(")")
+    val _sql: String = _stringBuilder.toString()
+    return performSuspending(__db, true, false) { _connection ->
+      val _stmt: SQLiteStatement = _connection.prepare(_sql)
+      try {
+        var _argIndex: Int = 1
+        for (_item: Long in conversationIds) {
+          _stmt.bindLong(_argIndex, _item)
+          _argIndex++
+        }
+        val _columnIndexOfId: Int = getColumnIndexOrThrow(_stmt, "id")
+        val _columnIndexOfStartTime: Int = getColumnIndexOrThrow(_stmt, "startTime")
+        val _columnIndexOfTitle: Int = getColumnIndexOrThrow(_stmt, "title")
+        val _result: MutableList<Conversation> = mutableListOf()
+        while (_stmt.step()) {
+          val _item_1: Conversation
+          val _tmpId: Long
+          _tmpId = _stmt.getLong(_columnIndexOfId)
+          val _tmpStartTime: Long
+          _tmpStartTime = _stmt.getLong(_columnIndexOfStartTime)
+          val _tmpTitle: String
+          _tmpTitle = _stmt.getText(_columnIndexOfTitle)
+          _item_1 = Conversation(_tmpId,_tmpStartTime,_tmpTitle)
+          _result.add(_item_1)
         }
         _result
       } finally {

@@ -36,4 +36,22 @@
     <string name="delete_api_config_message">Are you sure you want to delete this API configuration?</string>
     <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
+
+    <string name="export_chat_history">Export Chat History</string>
+    <string name="import_chat_history">Import Chat History</string>
+    <string name="export_all">Export All</string>
+    <string name="select_and_export">Select and Export</string>
+    <string name="overwrite_import">Overwrite Import</string>
+    <string name="incremental_import">Incremental Import</string>
+    <string name="import_mode">Import Mode</string>
+    <string name="choose_import_mode">Choose how to import the chat history.</string>
+    <string name="no_history_to_export">No chat history to export.</string>
+    <string name="export_successful">Export successful</string>
+    <string name="export_failed">Export failed: %s</string>
+    <string name="import_successful_messages">Import successful. %1$d conversations and %2$d messages imported.</string>
+    <string name="import_failed">Import failed: %s</string>
+    <string name="select_conversations_to_export">Select conversations to export</string>
+    <string name="export">Export</string>
+    <string name="select_all">Select All</string>
+    <string name="deselect_all">Deselect All</string>
 </resources>

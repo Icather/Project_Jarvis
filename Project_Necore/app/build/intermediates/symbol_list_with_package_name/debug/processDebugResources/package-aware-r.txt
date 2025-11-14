@@ -3750,6 +3750,7 @@ id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
 id action_clear_history
+id action_confirm_export
 id action_container
 id action_context_bar
 id action_divider
@@ -3761,6 +3762,7 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_new_chat
+id action_select_all
 id action_settings
 id action_text
 id actions
@@ -3909,6 +3911,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id exportApiConfigs
+id exportChatHistory
 id fade
 id fileUploadButton
 id file_name_text
@@ -3942,6 +3945,7 @@ id hide_graphics_layer_in_inspector_tag
 id hide_ime_id
 id hide_in_inspector_tag
 id hideable
+id historyCheckbox
 id historyRecyclerView
 id historyTimestamp
 id historyTitle
@@ -3959,6 +3963,7 @@ id image
 id imageUploadButton
 id immediateStop
 id importApiConfigs
+id importChatHistory
 id included
 id indeterminate
 id info
@@ -4546,6 +4551,7 @@ string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string chat_history
+string choose_import_mode
 string clear_history
 string clear_text_end_icon_content_description
 string close_drawer
@@ -4557,12 +4563,18 @@ string default_popup_window_title
 string delete
 string delete_api_config_message
 string delete_api_config_title
+string deselect_all
 string dropdown_menu
 string error
 string error_a11y_label
 string error_icon_content_description
 string error_occurred
+string export
+string export_all
 string export_api_configs
+string export_chat_history
+string export_failed
+string export_successful
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -4570,7 +4582,12 @@ string hide_bottom_view_on_scroll_behavior
 string history
 string icon_content_description
 string import_api_configs
+string import_chat_history
+string import_failed
+string import_mode
+string import_successful_messages
 string in_progress
+string incremental_import
 string indeterminate
 string item_view_role_description
 string m3_exceed_max_badge_text_suffix
@@ -4751,8 +4768,10 @@ string nav_rail_expanded_a11y_label
 string navigation_menu
 string network_error
 string new_chat
+string no_history_to_export
 string not_selected
 string not_set
+string overwrite_import
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -4769,6 +4788,9 @@ string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
 string searchview_navigation_content_description
 string select_a_model
+string select_all
+string select_and_export
+string select_conversations_to_export
 string selected
 string send
 string settings
@@ -5496,7 +5518,7 @@ style Theme_MaterialComponents_Light_NoActionBar
 style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
-style Theme_Project_Jarvis_App
+style Theme_Project_Necore_App
 style Theme_SplashScreen
 style Theme_SplashScreen_Common
 style Theme_SplashScreen_IconBackground

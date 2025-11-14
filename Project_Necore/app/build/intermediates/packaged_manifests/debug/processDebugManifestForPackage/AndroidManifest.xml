@@ -28,7 +28,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Project_Jarvis.App" >
+        android:testOnly="true"
+        android:theme="@style/Theme.Project_Necore.App" >
         <activity
             android:name="icather.pages.dev.MainActivity"
             android:exported="false" />

@@ -9,6 +9,12 @@ interface MessageDao {
     @Insert
     suspend fun insert(message: Message): Long
 
+    @Query("SELECT * FROM messages")
+    suspend fun getAllMessages(): List<Message>
+
+    @Query("SELECT * FROM messages WHERE conversationId IN (:conversationIds)")
+    suspend fun getMessagesForConversationIds(conversationIds: List<Long>): List<Message>
+
     @Query("SELECT * FROM messages WHERE conversationId = :conversationId ORDER BY timestamp ASC")
     suspend fun getMessagesForConversation(conversationId: Long): List<Message>
 
