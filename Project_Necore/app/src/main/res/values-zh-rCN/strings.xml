@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AI 助理</string>
+    <string name="app_name">Mecore</string>
     <string name="type_a_message">输入消息...</string>
     <string name="upload_image">上传图片</string>
     <string name="upload_file">上传文件</string>
@@ -54,4 +54,8 @@
     <string name="export">导出</string>
     <string name="select_all">全选</string>
     <string name="deselect_all">取消全选</string>
+    <string name="about">关于</string>
+    <string name="project_homepage">项目主页</string>
+    <string name="open_source_licenses">开源许可</string>
+    <string name="language">语言</string>
 </resources>

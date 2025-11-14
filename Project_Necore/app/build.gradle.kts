@@ -1,3 +1,7 @@
+val majorVersion = 1
+val minorVersion = 0
+val patchVersion = 0
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -13,8 +17,8 @@ android {
         applicationId = "icather.pages.dev"
         minSdk = 23
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = majorVersion * 1000000 + minorVersion * 1000 + patchVersion
+        versionName = "${majorVersion}.${minorVersion}.${patchVersion}"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

@@ -2,6 +2,7 @@ package icather.pages.dev
 
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.TextView
@@ -9,7 +10,9 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
+import androidx.core.os.LocaleListCompat
 import androidx.lifecycle.lifecycleScope
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -20,6 +23,7 @@ import icather.pages.dev.db.Message
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.security.MessageDigest
+import java.util.Locale
 import kotlinx.coroutines.launch
 
 data class ChatHistoryBundle(val conversations: List<Conversation>, val messages: List<Message>)
@@ -29,6 +33,7 @@ class SettingsActivity : AppCompatActivity() {
     private lateinit var db: AppDatabase
     private var jsonToExport: String? = null
 
+    // ... (rest of the launchers)
     private val exportApiLauncher = registerForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
         uri?.let { exportApiConfigsToUri(it) }
     }
@@ -74,6 +79,10 @@ class SettingsActivity : AppCompatActivity() {
 
         db = AppDatabase.getInstance(this)
 
+        findViewById<TextView>(R.id.languageButton).setOnClickListener {
+            showLanguageSelectionDialog()
+        }
+
         findViewById<TextView>(R.id.apiConfig).setOnClickListener {
             startActivity(Intent(this, ApiConfigActivity::class.java))
         }
@@ -93,6 +102,10 @@ class SettingsActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.importChatHistory).setOnClickListener {
             showImportChatHistoryDialog()
         }
+
+        findViewById<TextView>(R.id.aboutButton).setOnClickListener {
+            startActivity(Intent(this, AboutActivity::class.java))
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -104,6 +117,28 @@ class SettingsActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    private fun showLanguageSelectionDialog() {
+        val languages = arrayOf("English", "中文")
+        AlertDialog.Builder(this)
+            .setTitle(R.string.language)
+            .setItems(languages) { _, which ->
+                val locale = when (which) {
+                    0 -> "en"
+                    1 -> "zh-CN"
+                    else -> "en"
+                }
+                setLocale(locale)
+            }
+            .show()
+    }
+
+    private fun setLocale(languageCode: String) {
+        val appLocale = LocaleListCompat.forLanguageTags(languageCode)
+        AppCompatDelegate.setApplicationLocales(appLocale)
+    }
+
+    // ... (rest of the methods for import/export)
 
     private fun exportApiConfigs() {
         lifecycleScope.launch {

@@ -19,8 +19,7 @@
             android:exported="false" />
         <activity
             android:name=".ChatActivity"
-            android:exported="true"
-            android:label="">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,6 +34,12 @@
             android:exported="false" />
         <activity
             android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LicenseActivity"
             android:exported="false" />
         <activity
             android:name=".ApiConfigActivity"
