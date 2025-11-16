@@ -58,5 +58,12 @@
     <string name="project_homepage">项目主页</string>
     <string name="open_source_licenses">开源许可</string>
     <string name="check_for_updates">检查更新</string>
+    <string name="version_name">版本 %s</string>
+    <string name="checking_for_updates">正在检查更新</string>
+    <string name="latest_version">您已是最新版本</string>
+    <string name="check_for_updates_failed">检查更新失败</string>
+    <string name="updating_necore">正在更新 Necore</string>
+    <string name="downloading_update">正在下载更新</string>
+    <string name="download_failed">下载失败</string>
     <string name="language">语言</string>
 </resources>

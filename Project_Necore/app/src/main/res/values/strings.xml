@@ -58,6 +58,13 @@
     <string name="project_homepage">Project Homepage</string>
     <string name="open_source_licenses">Open Source Licenses</string>
     <string name="check_for_updates">Check for updates</string>
+    <string name="version_name">Version %s</string>
+    <string name="checking_for_updates">Checking for updates</string>
+    <string name="latest_version">You are on the latest version</string>
+    <string name="check_for_updates_failed">Failed to check for updates</string>
+    <string name="updating_necore">Updating Necore</string>
+    <string name="downloading_update">Downloading update</string>
+    <string name="download_failed">Download failed</string>
     <string name="mit_license_text_en">
         Copyright (c) 2025 一氯氢化物
 
